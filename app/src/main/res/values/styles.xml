@@ -8,4 +8,36 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TopPicksCard">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:layout_marginHorizontal">8dp</item>
+    </style>
+
+    <style name="TopPicksImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    
+    <style name="TopPicksText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TopPicksLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="CategoryCard">
+        <item name="android:layout_width">336dp</item>
+        <item name="android:layout_height">130dp</item>
+        <item name="android:layout_marginVertical">8dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
 </resources>
