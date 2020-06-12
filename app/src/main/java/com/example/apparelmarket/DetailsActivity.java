@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
+
 import org.w3c.dom.Text;
 
 public class DetailsActivity extends AppCompatActivity {
@@ -14,7 +17,8 @@ public class DetailsActivity extends AppCompatActivity {
     private TextView tvItemName;
     private TextView tvItemPrice;
     private TextView tvItemDetail;
-    private ImageView ivItemImg;
+    private CarouselView carouselView;
+    private int[] resIDs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +28,6 @@ public class DetailsActivity extends AppCompatActivity {
         tvItemName = (TextView) findViewById(R.id.tvItemName);
         tvItemPrice = (TextView) findViewById(R.id.tvItemPrice);
         tvItemDetail = (TextView) findViewById(R.id.tvItemDetail);
-        ivItemImg = (ImageView) findViewById(R.id.ivItemImg);
 
         Intent incomingItem = getIntent();
         // Populates data into view. Retrieves from the intent.
@@ -33,7 +36,19 @@ public class DetailsActivity extends AppCompatActivity {
         tvItemName.setText(item.getName());
         tvItemPrice.setText(item.getPrice());
         tvItemDetail.setText(item.getDetail());
-        int resID = item.getItemImage()[0];
-        ivItemImg.setImageResource(resID);
+        resIDs = item.getItemImage();
+
+        // CarouselView - Credits to Sayyam - https://github.com/sayyam/carouselview
+        carouselView = (CarouselView) findViewById(R.id.carouselView);
+        carouselView.setPageCount(resIDs.length);
+        carouselView.setImageListener(imageListener);
     }
+
+    // CarouselView - Credits to Sayyam - https://github.com/sayyam/carouselview
+    ImageListener imageListener = new ImageListener() {
+        @Override
+        public void setImageForPosition(int position, ImageView imageView) {
+            imageView.setImageResource(resIDs[position]);
+        }
+    };
 }
