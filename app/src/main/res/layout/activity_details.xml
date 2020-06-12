@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".DetailsActivity">
 
     <ScrollView
@@ -19,38 +20,39 @@
 
             <ImageView
                 android:id="@+id/ivItemImg"
-                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="400dp" />
+                android:layout_height="450dp"/>
 
             <TextView
                 android:id="@+id/tvItemName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="32sp"
+                android:textSize="24sp"
                 android:layout_marginTop="8dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
+                android:textAlignment="center"
+                android:paddingHorizontal="16dp"/>
 
             <TextView
-                android:id="@+id/tvCategoryName"
+                android:id="@+id/tvItemPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="22sp"
-                android:layout_marginTop="8dp" />
+                android:textSize="18sp"
+                android:layout_marginTop="6dp"/>
 
             <View
                 android:background="@android:color/darker_gray"
-                android:layout_width="280dp"
+                android:layout_width="370dp"
                 android:layout_height="1px"
                 android:layout_marginTop="8dp" />
 
             <TextView
-                android:id="@+id/tvDescription"
+                android:id="@+id/tvItemDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textSize="14sp" />
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="24dp"
+                android:textSize="14sp"
+                android:text="Test details"/>
 
 
         </LinearLayout>

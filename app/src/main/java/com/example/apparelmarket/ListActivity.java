@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -34,5 +36,19 @@ public class ListActivity extends AppCompatActivity {
         // Sets the adapter for the ListView for items in specified category.
         itemAdapter = new ItemAdapter(this, categoryItems);
         lvItems.setAdapter(itemAdapter);
+
+        setupItemSelectedListener();
+    }
+
+    public void setupItemSelectedListener() {
+        lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ListActivity.this, DetailsActivity.class);
+                // Sending Data
+                intent.putExtra(ITEM_DETAIL_KEY, itemAdapter.getItem(position));
+                startActivity(intent);
+            }
+        });
     }
 }
