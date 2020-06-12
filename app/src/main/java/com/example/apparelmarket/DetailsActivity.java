@@ -17,6 +17,7 @@ public class DetailsActivity extends AppCompatActivity {
     private TextView tvItemName;
     private TextView tvItemPrice;
     private TextView tvItemDetail;
+    private TextView tvItemViews;
     private CarouselView carouselView;
     private int[] resIDs;
 
@@ -28,6 +29,7 @@ public class DetailsActivity extends AppCompatActivity {
         tvItemName = (TextView) findViewById(R.id.tvItemName);
         tvItemPrice = (TextView) findViewById(R.id.tvItemPrice);
         tvItemDetail = (TextView) findViewById(R.id.tvItemDetail);
+        tvItemViews = (TextView) findViewById(R.id.tvItemViews);
 
         Intent incomingItem = getIntent();
         // Populates data into view. Retrieves from the intent.
@@ -36,6 +38,7 @@ public class DetailsActivity extends AppCompatActivity {
         tvItemName.setText(item.getName());
         tvItemPrice.setText(item.getPrice());
         tvItemDetail.setText(item.getDetail());
+        tvItemViews.setText(String.valueOf(item.getItemView()));
         resIDs = item.getItemImage();
 
         // CarouselView - Credits to Sayyam - https://github.com/sayyam/carouselview

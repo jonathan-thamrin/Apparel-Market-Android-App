@@ -3,6 +3,8 @@ import java.util.ArrayList;
 
 public class ApparelProvider {
 
+    static int[] itemViews = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+
     static String[] itemIDs = {
             "001", "002", "003", "004", "005", "006", "007", "008", "009", "010",
             "011", "012", "013", "014", "015", "016", "017", "018", "019", "020",
@@ -31,6 +33,7 @@ public class ApparelProvider {
             "Bronx seventy street trainers in graffiti", "Nike Running Renew Run trainers", "Fred Perry Deuce leather trainers", "Vans Anaheim Old Skool 36 DX trainer", "Converse Chuck Taylor All Star Ox Tie Dye trainer",
             "Dr Martens jadon platform boots", "Nike Running Joyride Dual Run trainers", "Burton Menswear cleated leather chelsea boot", "ASOS DESIGN slip on mule espadrilles in navy suede", "Nike Air Max 2090 trainers"
     };
+
 
     static String[] itemDetails = {
     "An alternative to your denim. Tartan check design. Belt loops.\n" +
@@ -147,6 +150,9 @@ public class ApparelProvider {
             R.drawable.shoes_6_1, R.drawable.shoes_6_2, R.drawable.shoes_6_3, R.drawable.shoes_7_1, R.drawable.shoes_7_2, R.drawable.shoes_7_3, R.drawable.shoes_8_1, R.drawable.shoes_8_2, R.drawable.shoes_8_3, R.drawable.shoes_9_1, R.drawable.shoes_9_2, R.drawable.shoes_9_3, R.drawable.shoes_10_1, R.drawable.shoes_10_2, R.drawable.shoes_10_3
     };
 
+    public static void incrementItemViews(int position) {
+        itemViews[position] = itemViews[position] + 1;
+    }
 
     public static ArrayList<ApparelItem> generateData() {
         ArrayList<ApparelItem>  apparelItemslist = new ArrayList<ApparelItem>();
@@ -158,6 +164,7 @@ public class ApparelProvider {
             String itemNameIN = itemNames[i];
             String itemDetailIN = itemDetails[i];
             int itemImageIN[] = new int[3];
+            int itemViewIN = itemViews[i];
 
             if(i == 0) {
                 itemImageIN[0] = itemImageAddrs[i];
@@ -169,7 +176,7 @@ public class ApparelProvider {
                 itemImageIN[2] = itemImageAddrs[3*i+2];
             }
 
-            ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN);
+            ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN, itemViewIN);
             apparelItemslist.add(ApparelItemIN);
         }
         return apparelItemslist;
@@ -186,6 +193,7 @@ public class ApparelProvider {
                 String itemNameIN = itemNames[i];
                 String itemDetailIN = itemDetails[i];
                 int itemImageIN[] = new int[3];
+                int itemViewIN = itemViews[i];
 
                 if(i == 0) {
                     itemImageIN[0] = itemImageAddrs[i];
@@ -197,7 +205,7 @@ public class ApparelProvider {
                     itemImageIN[2] = itemImageAddrs[3*i+2];
                 }
 
-                ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN);
+                ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN, itemViewIN);
                 shirtItemslist.add(ApparelItemIN);
             }
         }
@@ -216,6 +224,7 @@ public class ApparelProvider {
                 String itemNameIN = itemNames[i];
                 String itemDetailIN = itemDetails[i];
                 int itemImageIN[] = new int[3];
+                int itemViewIN = itemViews[i];
 
                 if(i == 0) {
                     itemImageIN[0] = itemImageAddrs[i];
@@ -227,7 +236,7 @@ public class ApparelProvider {
                     itemImageIN[2] = itemImageAddrs[3*i+2];
                 }
 
-                ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN);
+                ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN, itemViewIN);
                 chinoItemslist.add(ApparelItemIN);
             }
         }
@@ -246,6 +255,7 @@ public class ApparelProvider {
                 String itemNameIN = itemNames[i];
                 String itemDetailIN = itemDetails[i];
                 int itemImageIN[] = new int[3];
+                int itemViewIN = itemViews[i];
 
                 if(i == 0) {
                     itemImageIN[0] = itemImageAddrs[i];
@@ -257,7 +267,7 @@ public class ApparelProvider {
                     itemImageIN[2] = itemImageAddrs[3*i+2];
                 }
 
-                ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN);
+                ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN, itemViewIN);
                 shoeItemslist.add(ApparelItemIN);
             }
         }

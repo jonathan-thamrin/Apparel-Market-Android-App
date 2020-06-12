@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,8 +18,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     public static final String ITEM_DETAIL_KEY = "item";
-
-    // From activity_main.xml
     CardView cvCategory1, cvCategory2, cvCategory3;
 
     @Override

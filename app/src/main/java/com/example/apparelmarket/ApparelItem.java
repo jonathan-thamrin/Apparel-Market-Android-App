@@ -11,14 +11,16 @@ public class ApparelItem implements Serializable {
     private String itemName;
     private String itemDetail;
     private int[] itemImageAddr;
+    private int itemView;
 
-    public ApparelItem(String itemId, String itemCategory, String itemPrice, String itemName, String itemDetail, int[] itemImageAddr){
+    public ApparelItem(String itemId, String itemCategory, String itemPrice, String itemName, String itemDetail, int[] itemImageAddr, int itemView){
         this.itemId = itemId;
         this.itemCategory = itemCategory;
         this.itemPrice = itemPrice;
         this.itemName = itemName;
         this.itemDetail = itemDetail;
         this.itemImageAddr =  itemImageAddr;
+        this.itemView = itemView;
     }
 
     public String getId(){
@@ -37,5 +39,5 @@ public class ApparelItem implements Serializable {
         return itemDetail;
     }
     public int[] getItemImage(){ return itemImageAddr; }
-
+    public int getItemView(){ return itemView; }
 }
