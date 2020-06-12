@@ -20,7 +20,6 @@ public class ItemAdapter extends ArrayAdapter<ApparelItem> {
         public ImageView ivItemImage;
         public TextView tvItemName;
         public TextView tvItemPrice;
-        public TextView tvItemDetail;
     }
 
     // Need to google what this does.
@@ -57,8 +56,8 @@ public class ItemAdapter extends ArrayAdapter<ApparelItem> {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        // Adds the data into the template view (item_book). Remember attributes are types of Views.
-        viewHolder.ivItemImage.setImageResource(item.getItemImage());
+        // Adds the data into the template view (activity_list). Remember attributes are types of Views.
+        viewHolder.ivItemImage.setImageResource(item.getItemImage()[0]);
         viewHolder.tvItemName.setText(item.getName());
         viewHolder.tvItemPrice.setText(item.getPrice());
 

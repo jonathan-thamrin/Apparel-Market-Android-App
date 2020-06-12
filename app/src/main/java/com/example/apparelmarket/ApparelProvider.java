@@ -157,12 +157,16 @@ public class ApparelProvider {
             String itemPriceIN = itemPrices[i];
             String itemNameIN = itemNames[i];
             String itemDetailIN = itemDetails[i];
-            int itemImageIN;
+            int itemImageIN[] = new int[3];
 
             if(i == 0) {
-                itemImageIN = itemImageAddrs[i];
+                itemImageIN[0] = itemImageAddrs[i];
+                itemImageIN[1] = itemImageAddrs[i+1];
+                itemImageIN[2] = itemImageAddrs[i+2];
             } else {
-                itemImageIN = itemImageAddrs[3*i];
+                itemImageIN[0] = itemImageAddrs[3*i];
+                itemImageIN[1] = itemImageAddrs[3*i+1];
+                itemImageIN[2] = itemImageAddrs[3*i+2];
             }
 
             ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN);
@@ -181,12 +185,16 @@ public class ApparelProvider {
                 String itemPriceIN = itemPrices[i];
                 String itemNameIN = itemNames[i];
                 String itemDetailIN = itemDetails[i];
-                int itemImageIN;
+                int itemImageIN[] = new int[3];
 
                 if(i == 0) {
-                    itemImageIN = itemImageAddrs[i];
+                    itemImageIN[0] = itemImageAddrs[i];
+                    itemImageIN[1] = itemImageAddrs[i+1];
+                    itemImageIN[2] = itemImageAddrs[i+2];
                 } else {
-                    itemImageIN = itemImageAddrs[3*i];
+                    itemImageIN[0] = itemImageAddrs[3*i];
+                    itemImageIN[1] = itemImageAddrs[3*i+1];
+                    itemImageIN[2] = itemImageAddrs[3*i+2];
                 }
 
                 ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN);
@@ -207,12 +215,16 @@ public class ApparelProvider {
                 String itemPriceIN = itemPrices[i];
                 String itemNameIN = itemNames[i];
                 String itemDetailIN = itemDetails[i];
-                int itemImageIN;
+                int itemImageIN[] = new int[3];
 
                 if(i == 0) {
-                    itemImageIN = itemImageAddrs[i];
+                    itemImageIN[0] = itemImageAddrs[i];
+                    itemImageIN[1] = itemImageAddrs[i+1];
+                    itemImageIN[2] = itemImageAddrs[i+2];
                 } else {
-                    itemImageIN = itemImageAddrs[3*i];
+                    itemImageIN[0] = itemImageAddrs[3*i];
+                    itemImageIN[1] = itemImageAddrs[3*i+1];
+                    itemImageIN[2] = itemImageAddrs[3*i+2];
                 }
 
                 ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN);
@@ -233,12 +245,16 @@ public class ApparelProvider {
                 String itemPriceIN = itemPrices[i];
                 String itemNameIN = itemNames[i];
                 String itemDetailIN = itemDetails[i];
-                int itemImageIN;
+                int itemImageIN[] = new int[3];
 
                 if(i == 0) {
-                    itemImageIN = itemImageAddrs[i];
+                    itemImageIN[0] = itemImageAddrs[i];
+                    itemImageIN[1] = itemImageAddrs[i+1];
+                    itemImageIN[2] = itemImageAddrs[i+2];
                 } else {
-                    itemImageIN = itemImageAddrs[3*i];
+                    itemImageIN[0] = itemImageAddrs[3*i];
+                    itemImageIN[1] = itemImageAddrs[3*i+1];
+                    itemImageIN[2] = itemImageAddrs[3*i+2];
                 }
 
                 ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN);

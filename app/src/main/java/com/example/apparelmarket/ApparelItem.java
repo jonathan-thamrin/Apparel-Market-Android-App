@@ -10,9 +10,9 @@ public class ApparelItem implements Serializable {
     private String itemPrice;
     private String itemName;
     private String itemDetail;
-    private int itemImageAddr;
+    private int[] itemImageAddr;
 
-    public ApparelItem(String itemId, String itemCategory, String itemPrice, String itemName, String itemDetail, int itemImageAddr){
+    public ApparelItem(String itemId, String itemCategory, String itemPrice, String itemName, String itemDetail, int[] itemImageAddr){
         this.itemId = itemId;
         this.itemCategory = itemCategory;
         this.itemPrice = itemPrice;
@@ -36,6 +36,6 @@ public class ApparelItem implements Serializable {
     public String getDetail(){
         return itemDetail;
     }
-    public int getItemImage(){ return itemImageAddr; }
+    public int[] getItemImage(){ return itemImageAddr; }
 
 }

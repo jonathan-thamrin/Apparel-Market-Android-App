@@ -33,7 +33,7 @@ public class DetailsActivity extends AppCompatActivity {
         tvItemName.setText(item.getName());
         tvItemPrice.setText(item.getPrice());
         tvItemDetail.setText(item.getDetail());
-        int resID = item.getItemImage();
+        int resID = item.getItemImage()[0];
         ivItemImg.setImageResource(resID);
     }
 }
