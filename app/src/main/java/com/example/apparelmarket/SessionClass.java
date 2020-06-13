@@ -17,10 +17,8 @@ public class SessionClass {
     }
 
     public static void largestthree() {
-
         int i, first, second, third;
         int firstindex,secondindex,thirdindex;
-
 
         third = first = second = Integer.MIN_VALUE;
         firstindex = secondindex = thirdindex = 0;

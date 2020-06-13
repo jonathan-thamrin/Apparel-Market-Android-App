@@ -22,7 +22,7 @@ import com.example.apparelmarket.models.ApparelItem;
 import java.util.ArrayList;
 
 public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPickitemViewHolder> {
-
+    Context context;
     private ArrayList<ApparelItem> listofitems = new ArrayList<ApparelItem>();
     private TopPicksAdapter.OnItemClickListener clickListener;
 
@@ -64,8 +64,8 @@ public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPic
         return itemviews;
     }
 
-    public TopPicksAdapter() {
-
+    public TopPicksAdapter(Context context) {
+        this.context = context;
     }
 
     @Override

@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         GridLayoutManager gm = new GridLayoutManager(this,3);
         SessionClass.largestthree();
         toppicksRecycle = (RecyclerView) findViewById(R.id.TopPicksView);
-        topadapter = new TopPicksAdapter();
+        topadapter = new TopPicksAdapter(MainActivity.this);
 
         toppicksRecycle.setLayoutManager(gm);
         toppicksRecycle.setAdapter(topadapter);
