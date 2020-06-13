@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String ITEM_DETAIL_KEY = "item";
     CardView cvCategory1, cvCategory2, cvCategory3;
+
     RecyclerView toppicksRecycle;
     TopPicksAdapter topadapter;
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        com.example.apparelmarket.models.ApparelProvider.generateData();
+        ApparelProvider.generateData();
         SessionClass.generateData();
 
         // Initialising ListView from activity_main.xml
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position) {
                 Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
-                intent.putExtra(ITEM_DETAIL_KEY, ApparelProvider.dataArray.get(position).getId());
+                intent.putExtra(ITEM_DETAIL_KEY, SessionClass.toppickarray.get(position).getId());
                 startActivity(intent);
             }
         });
@@ -138,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
         SessionClass.largestthree();
         topadapter.notifyDataSetChanged();
     }
