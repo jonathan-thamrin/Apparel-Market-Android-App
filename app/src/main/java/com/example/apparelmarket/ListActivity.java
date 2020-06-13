@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.apparelmarket.models.ApparelItem;
+import com.example.apparelmarket.models.ApparelProvider;
+import com.example.apparelmarket.models.ItemAdapter;
+import com.example.apparelmarket.models.SearchClass;
+
 import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {

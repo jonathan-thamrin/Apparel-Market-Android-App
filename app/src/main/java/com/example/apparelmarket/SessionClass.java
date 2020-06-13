@@ -1,5 +1,8 @@
 package com.example.apparelmarket;
 
+import com.example.apparelmarket.models.ApparelItem;
+import com.example.apparelmarket.models.ApparelProvider;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,7 +11,7 @@ public class SessionClass {
     public static ArrayList<ApparelItem> toppickarray = new ArrayList<ApparelItem>();
 
     public static void generateData() {
-        toppickarray.add(0,ApparelProvider.dataArray.get(1));
+        toppickarray.add(0, ApparelProvider.dataArray.get(1));
         toppickarray.add(1,ApparelProvider.dataArray.get(2));
         toppickarray.add(2,ApparelProvider.dataArray.get(3));
     }

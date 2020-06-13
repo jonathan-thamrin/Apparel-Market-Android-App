@@ -1,9 +1,10 @@
-package com.example.apparelmarket;
+package com.example.apparelmarket.models;
+import com.example.apparelmarket.R;
 import java.util.ArrayList;
 
 public class ApparelProvider {
 
-    static ArrayList<ApparelItem> dataArray = new ArrayList<ApparelItem>();
+    public static ArrayList<ApparelItem> dataArray = new ArrayList<ApparelItem>();
 
     static int[] itemViews = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 

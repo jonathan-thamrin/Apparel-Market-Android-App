@@ -17,6 +17,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.apparelmarket.models.ApparelProvider;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ApparelProvider.generateData();
+        com.example.apparelmarket.models.ApparelProvider.generateData();
         SessionClass.generateData();
 
         // Initialising ListView from activity_main.xml
