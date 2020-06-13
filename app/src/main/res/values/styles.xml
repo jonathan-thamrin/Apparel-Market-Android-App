@@ -15,26 +15,26 @@
 
     <style name="TopPicksCard">
         <item name="android:layout_width">100dp</item>
-        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_height">140dp</item>
         <item name="android:elevation">8dp</item>
         <item name="android:layout_marginHorizontal">8dp</item>
     </style>
 
     <style name="TopPicksImage">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_height">100dp</item>
         <item name="android:scaleType">centerCrop</item>
     </style>
 
     <style name="TopPicksText">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_height">40dp</item>
         <item name="android:gravity">center</item>
     </style>
 
     <style name="TopPicksLayout">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">vertical</item>
     </style>
 

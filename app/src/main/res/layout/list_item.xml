@@ -22,28 +22,29 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="5dp"
             android:scaleType="centerInside"
-            android:transitionName="@string/ImageTransition"
             android:src="@drawable/shirt_9_1"/>
-
-        <TextView
-            android:id="@+id/tvItemName"
-            android:transitionName="TitleTransition"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="true"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:layout_marginHorizontal="32dp"
-            android:text="A Blue Shirt"/>
 
         <TextView
             android:id="@+id/tvItemPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="13sp"
-            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#292929"
             android:text="$49.99"/>
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:transitionName="TitleTransition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginHorizontal="32dp"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:text="A Blue Shirt"/>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

@@ -79,8 +79,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.itemViewHolder
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
         itemViewHolder itemviews = new itemViewHolder(v, clickListener);
         return itemviews;
-
-
     }
 
     public ItemAdapter(ArrayList<ApparelItem> list, Context context) {
@@ -99,6 +97,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.itemViewHolder
         setAnimation(holder.parent, position);
 
     }
+
     private void setAnimation(View viewToAnimate, int position) {
         Animation animation = AnimationUtils.loadAnimation(context, (position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_bottom);
         viewToAnimate.startAnimation(animation);
