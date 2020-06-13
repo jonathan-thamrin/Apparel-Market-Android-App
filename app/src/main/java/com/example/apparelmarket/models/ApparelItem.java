@@ -1,4 +1,4 @@
-package com.example.apparelmarket;
+package com.example.apparelmarket.models;
 
 import androidx.annotation.NonNull;
 
