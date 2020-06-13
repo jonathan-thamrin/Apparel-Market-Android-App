@@ -3,6 +3,7 @@ package com.example.apparelmarket;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -22,16 +23,28 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String ITEM_DETAIL_KEY = "item";
     CardView cvCategory1, cvCategory2, cvCategory3;
+    RecyclerView toppicksRecycle;
+    TopPicksAdapter topadapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ApparelProvider.generateData();
+        SessionClass.generateData();
 
         // Initialising ListView from activity_main.xml
         cvCategory1 = (CardView) findViewById(R.id.cvCategory1);
         cvCategory2 = (CardView) findViewById(R.id.cvCategory2);
         cvCategory3 = (CardView) findViewById(R.id.cvCategory3);
+
+        GridLayoutManager gm = new GridLayoutManager(this,3);
+        SessionClass.largestthree();
+        toppicksRecycle = (RecyclerView) findViewById(R.id.TopPicksView);
+        topadapter = new TopPicksAdapter();
+
+        toppicksRecycle.setLayoutManager(gm);
+        toppicksRecycle.setAdapter(topadapter);
 
         setupCategorySelectedListener();
     }
@@ -106,8 +119,12 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SessionClass.largestthree();
+        topadapter.notifyDataSetChanged();
+    }
 
 
 }

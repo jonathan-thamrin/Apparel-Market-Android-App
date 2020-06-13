@@ -33,14 +33,15 @@ public class DetailsActivity extends AppCompatActivity {
 
         Intent incomingItem = getIntent();
         // Populates data into view. Retrieves from the intent.
-        ApparelItem item =  (ApparelItem) incomingItem.getSerializableExtra(MainActivity.ITEM_DETAIL_KEY);
-
+        String incomingitemString =  incomingItem.getStringExtra(MainActivity.ITEM_DETAIL_KEY);
+        ApparelItem item = ApparelProvider.dataArray.get((Integer.parseInt(incomingitemString)) - 1);
 
         tvItemName.setText(item.getName());
         tvItemPrice.setText(item.getPrice());
         tvItemDetail.setText(item.getDetail());
         tvItemViews.setText(String.valueOf(item.getItemView()));
         resIDs = item.getItemImage();
+        item.incrementViews();
 
         // CarouselView - Credits to Sayyam - https://github.com/sayyam/carouselview
         carouselView = (CarouselView) findViewById(R.id.carouselView);

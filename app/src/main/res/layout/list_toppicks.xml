@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    style="@style/TopPicksCard"
+    app:cardCornerRadius="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        style="@style/TopPicksLayout">
+
+        <ImageView
+            style="@style/TopPicksImage"
+            android:id="@+id/TopPicksImage"
+            android:src="@drawable/shoes_2_1"/>
+        <TextView
+            style="@style/TopPicksText"
+            android:id="@+id/TopPicksText"
+            android:text="Best Seller"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

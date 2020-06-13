@@ -34,7 +34,7 @@ public class ListActivity extends AppCompatActivity {
         // Intent passes a query
         String query =  thisIntent.getStringExtra(MainActivity.ITEM_DETAIL_KEY);
         //Query is used to generate the array
-        ArrayList<ApparelItem> categoryItems = SearchClass.searchFunction(query, ApparelProvider.generateData());
+        ArrayList<ApparelItem> categoryItems = SearchClass.searchFunction(query, ApparelProvider.dataArray);
         // Sets the adapter for the ListView for items in specified category.
         itemAdapter = new ItemAdapter(this, categoryItems);
         lvItems.setAdapter(itemAdapter);
@@ -50,7 +50,7 @@ public class ListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ListActivity.this, DetailsActivity.class);
                 // Sending Data
-                intent.putExtra(ITEM_DETAIL_KEY, itemAdapter.getItem(position));
+                intent.putExtra(ITEM_DETAIL_KEY, itemAdapter.getItem(position).getId());
                 startActivity(intent);
             }
         });

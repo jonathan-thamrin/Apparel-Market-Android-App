@@ -3,6 +3,8 @@ import java.util.ArrayList;
 
 public class ApparelProvider {
 
+    static ArrayList<ApparelItem> dataArray = new ArrayList<ApparelItem>();
+
     static int[] itemViews = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
     static String[] itemIDs = {
@@ -154,7 +156,7 @@ public class ApparelProvider {
         itemViews[position] = itemViews[position] + 1;
     }
 
-    public static ArrayList<ApparelItem> generateData() {
+    public static void generateData() {
         ArrayList<ApparelItem>  apparelItemslist = new ArrayList<ApparelItem>();
 
         for (int i = 0; i < 30; i++) {
@@ -179,7 +181,7 @@ public class ApparelProvider {
             ApparelItem ApparelItemIN = new ApparelItem(idIN, itemCategoryIN, itemPriceIN, itemNameIN, itemDetailIN, itemImageIN, itemViewIN);
             apparelItemslist.add(ApparelItemIN);
         }
-        return apparelItemslist;
+        dataArray = apparelItemslist;
     }
 
     public static ArrayList<ApparelItem> getShirtItems() {

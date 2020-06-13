@@ -40,4 +40,5 @@ public class ApparelItem implements Serializable {
     }
     public int[] getItemImage(){ return itemImageAddr; }
     public int getItemView(){ return itemView; }
+    public void incrementViews() {this.itemView += 1; }
 }
