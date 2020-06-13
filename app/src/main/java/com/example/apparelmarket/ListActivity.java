@@ -30,9 +30,11 @@ public class ListActivity extends AppCompatActivity {
 
         Intent thisIntent = getIntent();
 
-        // Use the book to populate the data into our views. Retreieve data from the intent.
-        ArrayList<ApparelItem> categoryItems = (ArrayList) thisIntent.getSerializableExtra(MainActivity.ITEM_DETAIL_KEY);
 
+        // Intent passes a query
+        String query =  thisIntent.getStringExtra(MainActivity.ITEM_DETAIL_KEY);
+        //Query is used to generate the array
+        ArrayList<ApparelItem> categoryItems = SearchClass.searchFunction(query, ApparelProvider.generateData());
         // Sets the adapter for the ListView for items in specified category.
         itemAdapter = new ItemAdapter(this, categoryItems);
         lvItems.setAdapter(itemAdapter);

@@ -33,7 +33,8 @@ public class DetailsActivity extends AppCompatActivity {
 
         Intent incomingItem = getIntent();
         // Populates data into view. Retrieves from the intent.
-        ApparelItem item = (ApparelItem) incomingItem.getSerializableExtra(MainActivity.ITEM_DETAIL_KEY);
+        ApparelItem item =  (ApparelItem) incomingItem.getSerializableExtra(MainActivity.ITEM_DETAIL_KEY);
+
 
         tvItemName.setText(item.getName());
         tvItemPrice.setText(item.getPrice());
