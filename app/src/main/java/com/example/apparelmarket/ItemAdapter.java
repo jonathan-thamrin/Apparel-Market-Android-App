@@ -22,41 +22,37 @@ public class ItemAdapter extends ArrayAdapter<ApparelItem> {
         public TextView tvItemPrice;
     }
 
-    // Need to google what this does.
     public ItemAdapter(Context context, ArrayList<ApparelItem> apparelItems) {
         super(context, 0, apparelItems);
     }
 
     @Override
-    // Prepares the view for our Book. Position in Books list is given and
-    // displayed as a row within an AdapterView.
+    // Prepares the view for the Apparel Items. Position in the ApparelItems list is given and
+    // displayed as a CardView within an AdapterView.
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Get book from position (function from ArrayAdapter.
-        // Previously, constructor gave List of Books).
-        final ApparelItem item = getItem(position);
 
+        // Gets an Apparel Item from a position (function from ArrayAdapter).
+        final ApparelItem item = getItem(position);
         ViewHolder viewHolder;
 
-        // Inflating the view (taking layout XML and parsing it to display the book accordingly).
+        // Inflating the view (taking appropriate layout XML and parsing it to display the items accordingly).
         if(convertView == null) {
-            // Creates instance containing appropriate attributes (Book cover, title and author).
             viewHolder = new ViewHolder();
-            // Layout XML.
             LayoutInflater inflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            // Assigns convertView input with new inflater (Layout XML).
+            // Assigns convertView input with new inflater (list_item XML).
             convertView = inflater.inflate(R.layout.list_item, parent, false);
-            // Assigns those attributes.
+            // Assigns Views present in list_item XML.
             viewHolder.ivItemImage = (ImageView) convertView.findViewById(R.id.ivItemImg);
             viewHolder.tvItemName = (TextView) convertView.findViewById(R.id.tvItemName);
             viewHolder.tvItemPrice = (TextView) convertView.findViewById(R.id.tvItemPrice);
             // Sets tag associated with convertView (Layout XML).
             convertView.setTag(viewHolder);
         } else {
-            // If an existing view exists, inflate the view.
+            // If an existing view exists, inflate that view instead.
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        // Adds the data into the template view (activity_list). Remember attributes are types of Views.
+        // Adds the data into the template view (activity_list).
         viewHolder.ivItemImage.setImageResource(item.getItemImage()[0]);
         viewHolder.tvItemName.setText(item.getName());
         viewHolder.tvItemPrice.setText(item.getPrice());

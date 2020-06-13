@@ -37,8 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setupCategorySelectedListener() {
-        // Sets OnClick Listener for ListView
-        // Sends String of query for catagory, to Display all of a certain catagory
+        // Sets OnClick Listener for ListView. Sends String of query for category, to Display all of a certain category.
         cvCategory1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,24 +50,25 @@ public class MainActivity extends AppCompatActivity {
         cvCategory2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent shirtsIntent = new Intent(MainActivity.this, ListActivity.class);
-                shirtsIntent.putExtra(ITEM_DETAIL_KEY, "Chinos");
-                startActivity(shirtsIntent);
+                Intent chinosIntent = new Intent(MainActivity.this, ListActivity.class);
+                chinosIntent.putExtra(ITEM_DETAIL_KEY, "Chinos");
+                startActivity(chinosIntent);
             }
         });
 
         cvCategory3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent shirtsIntent = new Intent(MainActivity.this, ListActivity.class);
-                shirtsIntent.putExtra(ITEM_DETAIL_KEY, "Shoes");
-                startActivity(shirtsIntent);
+                Intent shoesIntent = new Intent(MainActivity.this, ListActivity.class);
+                shoesIntent.putExtra(ITEM_DETAIL_KEY, "Shoes");
+                startActivity(shoesIntent);
             }
         });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main_activity, menu);
         final MenuItem searchItem = menu.findItem(R.id.action_search);
@@ -90,9 +90,10 @@ public class MainActivity extends AppCompatActivity {
                 searchView.setIconified(true);
                 searchItem.collapseActionView();
 
-                //complete SearchActivity by yourself
+                // Creates an intent and sends the query to ListActivity for later use.
                 Intent intent = new Intent(MainActivity.this, ListActivity.class);
                 intent.putExtra(ITEM_DETAIL_KEY, query);
+                // Starts ListActivity.
                 startActivity(intent);
 
                 return true;

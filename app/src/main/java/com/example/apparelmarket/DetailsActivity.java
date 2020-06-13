@@ -31,11 +31,11 @@ public class DetailsActivity extends AppCompatActivity {
         tvItemDetail = (TextView) findViewById(R.id.tvItemDetail);
         tvItemViews = (TextView) findViewById(R.id.tvItemViews);
 
+        // Retrieves data from the intent sent from ListActivity.
         Intent incomingItem = getIntent();
-        // Populates data into view. Retrieves from the intent.
         ApparelItem item =  (ApparelItem) incomingItem.getSerializableExtra(MainActivity.ITEM_DETAIL_KEY);
 
-
+        // Appropriate Views are updated accordingly.
         tvItemName.setText(item.getName());
         tvItemPrice.setText(item.getPrice());
         tvItemDetail.setText(item.getDetail());

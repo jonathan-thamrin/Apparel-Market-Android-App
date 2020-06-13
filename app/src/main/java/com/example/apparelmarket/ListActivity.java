@@ -13,11 +13,8 @@ import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
 
-    // Pulling together ItemAdapter and initialising the custom Layout XML with all the books.
     public static final String ITEM_DETAIL_KEY = "item";
-    // From activity_list.xml
     ListView lvItems;
-    // From Adapter extending ArrayAdapter
     ItemAdapter itemAdapter;
 
     @Override
@@ -28,22 +25,22 @@ public class ListActivity extends AppCompatActivity {
         // ListView from activity_list.xml
         lvItems = (ListView) findViewById(R.id.lvItems);
 
+        // Gets the intent and Query sent from MainActivity.
         Intent thisIntent = getIntent();
-
-
-        // Intent passes a query
         String query =  thisIntent.getStringExtra(MainActivity.ITEM_DETAIL_KEY);
-        //Query is used to generate the array
-        ArrayList<ApparelItem> categoryItems = SearchClass.searchFunction(query, ApparelProvider.generateData());
-        // Sets the adapter for the ListView for items in specified category.
-        itemAdapter = new ItemAdapter(this, categoryItems);
+        // Query is used to generate the appropriate array of ApparelItems.
+        ArrayList<ApparelItem> queriedItems = SearchClass.searchFunction(query, ApparelProvider.generateData());
+        // Sets the adapter for ListActivity allowing for appropriate results to be displayed.
+        itemAdapter = new ItemAdapter(this, queriedItems);
         lvItems.setAdapter(itemAdapter);
 
-        if (!(categoryItems.get(0).getId() == "null")) {
+        // Items when clicked in ListActivity proceed to DetailsActivity if items were displayed in ListAcitivty.
+        if (!(queriedItems.get(0).getId() == "null")) {
             setupItemSelectedListener();
         }
     }
 
+    // Sends an item's data from ListActivity to DetailsActivity for further use.
     public void setupItemSelectedListener() {
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

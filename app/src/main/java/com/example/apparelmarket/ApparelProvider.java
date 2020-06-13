@@ -150,10 +150,12 @@ public class ApparelProvider {
             R.drawable.shoes_6_1, R.drawable.shoes_6_2, R.drawable.shoes_6_3, R.drawable.shoes_7_1, R.drawable.shoes_7_2, R.drawable.shoes_7_3, R.drawable.shoes_8_1, R.drawable.shoes_8_2, R.drawable.shoes_8_3, R.drawable.shoes_9_1, R.drawable.shoes_9_2, R.drawable.shoes_9_3, R.drawable.shoes_10_1, R.drawable.shoes_10_2, R.drawable.shoes_10_3
     };
 
+    // Increments the number of views for a given item - Simulated.
     public static void incrementItemViews(int position) {
         itemViews[position] = itemViews[position] + 1;
     }
 
+    // Generates all the Apparel Item data and returns it as an array.
     public static ArrayList<ApparelItem> generateData() {
         ArrayList<ApparelItem>  apparelItemslist = new ArrayList<ApparelItem>();
 
@@ -166,6 +168,7 @@ public class ApparelProvider {
             int itemImageIN[] = new int[3];
             int itemViewIN = itemViews[i];
 
+            // Adds the appropriate images for each item.
             if(i == 0) {
                 itemImageIN[0] = itemImageAddrs[i];
                 itemImageIN[1] = itemImageAddrs[i+1];
