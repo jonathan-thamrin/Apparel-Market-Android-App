@@ -39,7 +39,9 @@ public class ListActivity extends AppCompatActivity {
         itemAdapter = new ItemAdapter(this, categoryItems);
         lvItems.setAdapter(itemAdapter);
 
-        setupItemSelectedListener();
+        if (!(categoryItems.get(0).getId() == "null")) {
+            setupItemSelectedListener();
+        }
     }
 
     public void setupItemSelectedListener() {

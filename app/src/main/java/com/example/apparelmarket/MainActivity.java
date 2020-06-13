@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void setupCategorySelectedListener() {
         // Sets OnClick Listener for ListView
+        // Sends String of query for catagory, to Display all of a certain catagory
         cvCategory1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         searchView.setQueryHint("epic");
         return true;*/
 
-        //this might work if we just launch an intent here!!!
+        //Intent to search
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
