@@ -1,9 +1,13 @@
 package com.example.apparelmarket;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,7 +42,6 @@ public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPic
             super(itemView);
             ivImage = itemView.findViewById(R.id.TopPicksImage);
             tvName = itemView.findViewById(R.id.TopPicksText);
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

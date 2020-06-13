@@ -29,7 +29,8 @@
                 app:radius="4dp"
                 app:slideInterval="2147483647"
                 app:strokeColor="#FFFFFFFF"
-                app:strokeWidth="1dp"/>
+                app:strokeWidth="1dp"
+                android:transitionName="ImageTransition"/>
 
             <TextView
                 android:id="@+id/tvItemName"
@@ -38,6 +39,7 @@
                 android:textSize="24sp"
                 android:layout_marginTop="8dp"
                 android:textAlignment="center"
+                android:transitionName="TitleTransition"
                 android:paddingHorizontal="16dp"/>
 
             <TextView
