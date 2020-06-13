@@ -21,20 +21,20 @@ public class ApparelProvider {
     };
 
     static String[] itemPrices = {
-            "$69.99", "$49.99", "$199.99", "$12.99", "$48.42", "$39.23", "$93.12", "$13.35", "$35.13", "$95.23",
-            "$36.63", "$24.46", "$26.37", "$63.48", "$62.41", "$67.42", "$46.13", "$24.46", "$31.53", "$24.13",
-            "$24.13", "$514.43", "$14.53", "$6.24", "$537.24", "$24.12", "$356.24", "$42.13", "$467.13", "$31.24"
+            "$69.99", "$49.99", "$199.99", "$79.99", "$48.99", "$39.99", "$93.99", "$53.99", "$45.99", "$95.99",
+            "$36.99", "$24.99", "$26.99", "$63.99", "$62.99", "$67.99", "$46.99", "$24.99", "$31.99", "$24.99",
+            "$499.99", "$122.99", "$144.99", "$69.99", "$142.99", "$299.99", "$219.99", "$109.99", "$79.99", "$399.99"
     };
 
     static String[] itemNames = {
             "boohooMAN winter tartan trouser", "New Look slim chinos", "Ted Baker slim fit stretch trousers", "Only & Sons drawstring jersey trousers", "Burton Menswear skinny trousers",
-            "Celio slim trousers in cream", "Weekday Tucker Checked Trousers in Grey", "Only & Sons stretch smart trouser", "ASOS DESIGN 2 pack skinny chinos", "Nike Pro Training tights in black",
+            "Celio slim trousers in cream", "Weekday Tucker Checked Trousers in Grey", "Only & Sons stretch smart trouser", "JN Design 2 pack skinny chinos", "Nike Pro Training tights in black",
 
             "PS Paul Smith patchwork pocket shirt in khaki", "Armani Exchange all over logo long sleeve shirt", "AllSaints revere collar shirt with spliced tiger print", "Polo Ralph Lauren short sleeve stripe oxford shirt", "Tommy Hilfiger oxford shirt",
-            "Celio shirt in beige linen", "ASOS DESIGN relaxed fit linen shirt", "ASOS DESIGN stretch skinny fit shirt", "ASOS DESIGN regular fit sheer shirt", "Pull&Bear short sleeve shirt with aztec print",
+            "Celio shirt in beige linen", "JN Design relaxed fit linen shirt", "JN Design stretch skinny fit shirt", "JN Design regular fit sheer shirt", "Pull&Bear short sleeve shirt with aztec print",
 
             "Bronx seventy street trainers in graffiti", "Nike Running Renew Run trainers", "Fred Perry Deuce leather trainers", "Vans Anaheim Old Skool 36 DX trainer", "Converse Chuck Taylor All Star Ox Tie Dye trainer",
-            "Dr Martens jadon platform boots", "Nike Running Joyride Dual Run trainers", "Burton Menswear cleated leather chelsea boot", "ASOS DESIGN slip on mule espadrilles in navy suede", "Nike Air Max 2090 trainers"
+            "Dr Martens jadon platform boots", "Nike Running Joyride Dual Run trainers", "Burton Menswear cleated leather chelsea boot", "JN Design slip on mule espadrilles in navy suede", "Nike Air Max 2090 trainers"
     };
 
 
@@ -71,7 +71,7 @@ public class ApparelProvider {
             "Model's height: 6'2”/188 cm.\n" +
             "Model is wearing: W 32\" L 32\".\n" +
             "Lightweight woven fabric. The kind that stretches.",
-    "Chinos multipack by ASOS DESIGN. Part of our responsible edit. Pack of two pairs. Belt loops.\n" +
+    "Chinos multipack by JN Design. Part of our responsible edit. Pack of two pairs. Belt loops.\n" +
             "Model's height: 185.5cm/6'1\".\n" +
             "Model is wearing: W 32\" L 32\".\n" +
             "Soft woven fabric. It's got a little stretch.",
@@ -103,15 +103,15 @@ public class ApparelProvider {
             "Model's height: 183cm/6'2.5\".\n" +
             "Model is wearing: Size Medium.\n" +
             "Lightweight linen. Strong, breathable fabric.",
-    "Shirt by ASOS DESIGN. Revere collar. Short sleeves. Plain design.\n" +
+    "Shirt by JN Design. Revere collar. Short sleeves. Plain design.\n" +
             "Model's height: 185.5cm/6'1\".\n" +
             "Model is wearing: Size Medium.\n" +
             "Linen-rich fabric. It's strong and breathable.",
-    "Shirt by ASOS DESIGN. Part of our responsible edit. Spread collar. Button placket.\n" +
+    "Shirt by JN Design. Part of our responsible edit. Spread collar. Button placket.\n" +
             "Model's height: 178cm/5'10\".\n" +
             "Model is wearing: Size Medium.\n" +
             "Lightweight cotton. Soft, strong and breathable.",
-    "Shirt by ASOS DESIGN. Let your outfit do the talking. Animal print. Notch lapels/\n" +
+    "Shirt by JN Design. Let your outfit do the talking. Animal print. Notch lapels/\n" +
             "Model's height: 187.5cm/6'2\".\n" +
             "Model is wearing: Size Medium.\n" +
             "Lightweight, woven fabric. For those see-through vibes.",
@@ -136,7 +136,7 @@ public class ApparelProvider {
             "Breathable mesh upper. Smooth overlays.",
     "Boots by Burton Menswear London. Your rain-or-shine shoes. Elasticated inserts. Pull tabs.\n" +
             "Leather and suede upper. Matte finish.",
-    "Espadrilles by ASOS DESIGN. Who needs the back of a shoe anyway? Slip-on style. Gold-tone snaffle detail.\n" +
+    "Espadrilles by JN Design. Who needs the back of a shoe anyway? Slip-on style. Gold-tone snaffle detail.\n" +
             "Soft suede upper. Fuzzy, velvety finish.",
     "Trainers by Nike. Lace-up design. Pull tabs for easy on/off.\n" +
             "Knitted upper. Comfy, sock-like fit."
