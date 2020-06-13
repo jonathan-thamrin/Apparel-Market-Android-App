@@ -70,6 +70,7 @@ public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPic
 
     @Override
     public void onBindViewHolder(@NonNull TopPicksAdapter.TopPickitemViewHolder holder, int position) {
+        SessionClass.largestthree();
         int resID =  SessionClass.toppickarray.get(position).getItemImage()[0];
 
         holder.tvName.setText(SessionClass.toppickarray.get(position).getName());

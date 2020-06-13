@@ -41,7 +41,7 @@ public class ListActivity extends AppCompatActivity {
         //Query is used to generate the array
         final ArrayList<ApparelItem> categoryItems = SearchClass.searchFunction(query, ApparelProvider.dataArray);
         // Sets the adapter for the ListView for items in specified category.
-        itemAdapter = new ItemAdapter(categoryItems);
+        itemAdapter = new ItemAdapter(categoryItems, ListActivity.this);
         lvItems.setLayoutManager(gm);
         lvItems.setAdapter(itemAdapter);
 
@@ -52,8 +52,15 @@ public class ListActivity extends AppCompatActivity {
                     Intent intent = new Intent(ListActivity.this, DetailsActivity.class);
                     intent.putExtra(ITEM_DETAIL_KEY, categoryItems.get(position).getId());
                     startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
             });
         }
     }
+
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
 }

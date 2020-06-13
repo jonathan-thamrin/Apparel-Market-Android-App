@@ -3,7 +3,8 @@
     style="@style/TopPicksCard"
     app:cardCornerRadius="4dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
     <LinearLayout
         style="@style/TopPicksLayout">

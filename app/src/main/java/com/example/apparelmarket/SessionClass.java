@@ -57,9 +57,9 @@ public class SessionClass {
                 thirdindex = i;
 
         }
-        toppickarray.set(2,ApparelProvider.dataArray.get(thirdindex) );
-        toppickarray.set(1,ApparelProvider.dataArray.get(secondindex) );
-        toppickarray.set(0,ApparelProvider.dataArray.get(firstindex) );
 
+        toppickarray.set(2,ApparelProvider.dataArray.get(thirdindex));
+        toppickarray.set(1,ApparelProvider.dataArray.get(secondindex));
+        toppickarray.set(0,ApparelProvider.dataArray.get(firstindex));
     }
 }

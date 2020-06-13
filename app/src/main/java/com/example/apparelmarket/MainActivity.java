@@ -2,6 +2,7 @@ package com.example.apparelmarket;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
 import com.example.apparelmarket.models.ApparelProvider;
 
 import java.util.ArrayList;
@@ -29,14 +31,15 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView toppicksRecycle;
     TopPicksAdapter topadapter;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ApparelProvider.generateData();
-        SessionClass.generateData();
+
+        if (ApparelProvider.dataArray.isEmpty()) {
+            ApparelProvider.generateData();
+            SessionClass.generateData();
+        }
 
         // Initialising ListView from activity_main.xml
         cvCategory1 = (CardView) findViewById(R.id.cvCategory1);
@@ -63,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
                 intent.putExtra(ITEM_DETAIL_KEY, SessionClass.toppickarray.get(position).getId());
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
@@ -77,24 +81,27 @@ public class MainActivity extends AppCompatActivity {
                 Intent shirtsIntent = new Intent(MainActivity.this, ListActivity.class);
                 shirtsIntent.putExtra(ITEM_DETAIL_KEY, "Shirt");
                 startActivity(shirtsIntent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
         cvCategory2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent shirtsIntent = new Intent(MainActivity.this, ListActivity.class);
-                shirtsIntent.putExtra(ITEM_DETAIL_KEY, "Chinos");
-                startActivity(shirtsIntent);
+                Intent chinosIntent = new Intent(MainActivity.this, ListActivity.class);
+                chinosIntent.putExtra(ITEM_DETAIL_KEY, "Chinos");
+                startActivity(chinosIntent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 
         cvCategory3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent shirtsIntent = new Intent(MainActivity.this, ListActivity.class);
-                shirtsIntent.putExtra(ITEM_DETAIL_KEY, "Shoes");
-                startActivity(shirtsIntent);
+                Intent shoesIntent = new Intent(MainActivity.this, ListActivity.class);
+                shoesIntent.putExtra(ITEM_DETAIL_KEY, "Shoes");
+                startActivity(shoesIntent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
     }
@@ -144,6 +151,5 @@ public class MainActivity extends AppCompatActivity {
         SessionClass.largestthree();
         topadapter.notifyDataSetChanged();
     }
-
 
 }

@@ -2,15 +2,18 @@
 <androidx.cardview.widget.CardView
     style="@style/CategoryCard"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:elevation="8dp"
+    app:cardBackgroundColor="#f5f5f5"
     android:layout_margin="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id = "@+id/parent">
 
         <ImageView
             android:id="@+id/ivItemImg"

@@ -10,9 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DetailsActivity"></activity>
-        <activity android:name=".ListActivity" >
 
+        <activity android:name=".ListActivity" >
+            <!--<meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.apparelmarket.MainActivity" />
+            <meta-data android:name="android.app.searchable"
+                android:resource="@layout/activity_list" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>-->
         </activity>
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
