@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView toppicksRecycle;
     TopPicksAdapter topadapter;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -139,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
         SessionClass.largestthree();
         topadapter.notifyDataSetChanged();
     }

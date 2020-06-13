@@ -11,12 +11,13 @@ public class SessionClass {
     public static ArrayList<ApparelItem> toppickarray = new ArrayList<ApparelItem>();
 
     public static void generateData() {
-        toppickarray.add(0, ApparelProvider.dataArray.get(1));
-        toppickarray.add(1, ApparelProvider.dataArray.get(2));
-        toppickarray.add(2, ApparelProvider.dataArray.get(3));
+        toppickarray.add(ApparelProvider.dataArray.get(0));
+        toppickarray.add(ApparelProvider.dataArray.get(1));
+        toppickarray.add(ApparelProvider.dataArray.get(2));
     }
 
     public static void largestthree() {
+
         int i, first, second, third;
         int firstindex,secondindex,thirdindex;
 
