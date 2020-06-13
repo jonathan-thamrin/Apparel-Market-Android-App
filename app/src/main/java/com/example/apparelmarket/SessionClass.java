@@ -12,8 +12,8 @@ public class SessionClass {
 
     public static void generateData() {
         toppickarray.add(0, ApparelProvider.dataArray.get(1));
-        toppickarray.add(1,ApparelProvider.dataArray.get(2));
-        toppickarray.add(2,ApparelProvider.dataArray.get(3));
+        toppickarray.add(1, ApparelProvider.dataArray.get(2));
+        toppickarray.add(2, ApparelProvider.dataArray.get(3));
     }
 
     public static void largestthree() {
