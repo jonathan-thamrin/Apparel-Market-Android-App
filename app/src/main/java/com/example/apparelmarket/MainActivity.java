@@ -46,7 +46,21 @@ public class MainActivity extends AppCompatActivity {
         toppicksRecycle.setLayoutManager(gm);
         toppicksRecycle.setAdapter(topadapter);
 
+
         setupCategorySelectedListener();
+        setupTopPicksListener();
+    }
+
+    public void setupTopPicksListener() {
+        topadapter.setOnItemClickListner(new TopPicksAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+                intent.putExtra(ITEM_DETAIL_KEY, ApparelProvider.dataArray.get(position).getId());
+                startActivity(intent);
+            }
+        });
+
     }
 
     public void setupCategorySelectedListener() {
