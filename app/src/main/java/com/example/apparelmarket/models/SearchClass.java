@@ -1,6 +1,7 @@
-package com.example.apparelmarket;
+package com.example.apparelmarket.models;
 
-import java.lang.reflect.Array;
+import com.example.apparelmarket.R;
+
 import java.util.ArrayList;
 
 public class SearchClass {

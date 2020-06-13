@@ -1,4 +1,6 @@
-package com.example.apparelmarket;
+package com.example.apparelmarket.models;
+import com.example.apparelmarket.R;
+
 import java.util.ArrayList;
 
 public class ApparelProvider {

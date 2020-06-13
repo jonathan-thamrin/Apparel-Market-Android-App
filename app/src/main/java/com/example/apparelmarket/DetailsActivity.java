@@ -7,10 +7,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.apparelmarket.models.ApparelItem;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
-
-import org.w3c.dom.Text;
 
 public class DetailsActivity extends AppCompatActivity {
 

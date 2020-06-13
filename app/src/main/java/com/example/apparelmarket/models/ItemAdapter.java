@@ -1,4 +1,4 @@
-package com.example.apparelmarket;
+package com.example.apparelmarket.models;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import org.w3c.dom.Text;
+import com.example.apparelmarket.R;
 
 import java.util.ArrayList;
 
