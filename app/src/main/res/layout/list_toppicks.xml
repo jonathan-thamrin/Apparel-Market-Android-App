@@ -12,7 +12,6 @@
         <ImageView
             style="@style/TopPicksImage"
             android:id="@+id/TopPicksImage"
-            android:transitionName="@string/ImageTransition"
             android:src="@drawable/shoes_2_1"/>
         <TextView
             style="@style/TopPicksText"
