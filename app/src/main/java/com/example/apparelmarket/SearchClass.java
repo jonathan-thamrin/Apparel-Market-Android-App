@@ -8,7 +8,10 @@ public class SearchClass {
         ArrayList<ApparelItem> toReturn = new ArrayList<ApparelItem>();
 
         for (int i = 0; i < toSearch.size(); i++){
-            if (toSearch.get(i).getName().contains(query) || toSearch.get(i).getCategory().contains(query)) {
+            if ( (toSearch.get(i).getName().toLowerCase().contains(query.toLowerCase())) || (toSearch.get(i).getCategory().toLowerCase().contains(query.toLowerCase() ))) {
+                toReturn.add(toSearch.get(i));
+            }
+            else if ((query.toLowerCase().contains(toSearch.get(i).getName().toLowerCase() )) || (query.toLowerCase().contains(toSearch.get(i).getCategory().toLowerCase() )) ){
                 toReturn.add(toSearch.get(i));
             }
         }
