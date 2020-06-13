@@ -12,10 +12,11 @@ public class SearchClass {
                 toReturn.add(toSearch.get(i));
             }
         }
+        //TODO IMPLEMENT PROPER NOT FOUND IMAGES
         if (toReturn.isEmpty()) {
             int[] notFound = {R.drawable.chinos_1_1,R.drawable.chinos_1_1,R.drawable.chinos_1_1};
 
-            ApparelItem notfound= new ApparelItem("No results found","No results found", "null", "null", "null", notFound,1);
+            ApparelItem notfound= new ApparelItem("null","No results found", "Sorry about that", "No results found", "null", notFound,1);
             toReturn.add(notfound);
         }
 

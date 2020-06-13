@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         searchView.setQueryHint("epic");
         return true;*/
 
-        //this might work if we just launch an intent here!!!
+        //Intent to search
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
