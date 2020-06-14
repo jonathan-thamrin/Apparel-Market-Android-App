@@ -28,117 +28,117 @@ public class ApparelProvider {
 
     static String[] itemNames = {
             "boohooMAN winter tartan trouser", "New Look slim chinos", "Ted Baker slim fit stretch trousers", "Only & Sons drawstring jersey trousers", "Burton Menswear skinny trousers",
-            "Celio slim trousers in cream", "Weekday Tucker Checked Trousers in Grey", "Only & Sons stretch smart trouser", "JN Design 2 pack skinny chinos", "Nike Pro Training tights in black",
+            "Celio slim trousers", "Weekday Tucker Checked Trousers", "Only & Sons stretch smart trouser", "JN Design 2 pack skinny chinos", "Nike Pro Training tights",
 
-            "PS Paul Smith patchwork pocket shirt in khaki", "Armani Exchange all over logo long sleeve shirt", "AllSaints revere collar shirt with spliced tiger print", "Polo Ralph Lauren short sleeve stripe oxford shirt", "Tommy Hilfiger oxford shirt",
-            "Celio shirt in beige linen", "JN Design relaxed fit linen shirt", "JN Design stretch skinny fit shirt", "JN Design regular fit sheer shirt", "Pull&Bear short sleeve shirt with aztec print",
+            "PS Paul Smith patchwork pocket shirt", "Armani Exchange long sleeve shirt", "AllSaints revere collar shirt with tiger print", "Polo Ralph Lauren short sleeve oxford shirt", "Tommy Hilfiger oxford shirt",
+            "Celio shirt in linen", "JN Design relaxed fit linen shirt", "JN Design stretch skinny fit shirt", "JN Design regular fit sheer shirt", "Pull&Bear shirt with aztec print",
 
-            "Bronx seventy street trainers in graffiti", "Nike Running Renew Run trainers", "Fred Perry Deuce leather trainers", "Vans Anaheim Old Skool 36 DX trainer", "Converse Chuck Taylor All Star Ox Tie Dye trainer",
-            "Dr Martens jadon platform boots", "Nike Running Joyride Dual Run trainers", "Burton Menswear cleated leather chelsea boot", "JN Design slip on mule espadrilles in navy suede", "Nike Air Max 2090 trainers"
+            "Bronx seventy street trainers", "Nike Running Renew Run trainers", "Fred Perry Deuce leather trainers", "Vans Anaheim Old Skool trainer", "Converse Chuck Taylor Tie Dye trainer",
+            "Dr Martens jadon platform boots", "Nike Running Joyride Dual Run trainers", "Burton Menswear leather boot", "JN Design slip ons", "Nike Air Max 2090 trainers"
     };
 
 
     static String[] itemDetails = {
-    "An alternative to your denim. Tartan check design. Belt loops.\n" +
+    "An alternative to your denim. Tartan check design. Belt loops.\n\n" +
             "Model's height: 185.5cm/6'1\".\n" +
-            "Model is wearing: W 32\" L 32\".\n" +
+            "Model is wearing: W 32\" L 32\".\n\n" +
             "Soft woven fabric. It's got a little stretch.",
-    "Chinos by New Look. Give your jeans a day off. Regular rise. Belt loops.\n" +
+    "Chinos by New Look. Give your jeans a day off. Regular rise. Belt loops.\n\n" +
             "Model's height: 185.5cm/6'1\".\n" +
-            "Model is wearing: W 32\" L 32\".\n" +
+            "Model is wearing: W 32\" L 32\".\n\n" +
             "Soft, stretch twill. Semi-structured fabric with a parallel-rib pattern.",
-    "Trousers by Ted Baker. A little bit smart. Zip fly with button fastening. Side pockets.\n" +
+    "Trousers by Ted Baker. A little bit smart. Zip fly with button fastening. Side pockets.\n\n" +
             "Model's height: 185.5cm/6'1\".\n" +
-            "Model is wearing: W 32\" L 32\".\n" +
+            "Model is wearing: W 32\" L 32\".\n\n" +
             "Soft, stretch twill. Semi-structured fabric with a parallel-rib pattern.",
-    "Trousers by Only & Sons. For your everyday thing. Regular rise. Drawstring waist.\n" +
+    "Trousers by Only & Sons. For your everyday thing. Regular rise. Drawstring waist.\n\n" +
             "Model's height: 185.5cm/6'1\".\n" +
-            "Model is wearing: Size Medium.\n" +
+            "Model is wearing: Size Medium.\n\n" +
             "Soft fabric. Slightly stretchy.",
-    "Chinos by Burton Menswear London. A little bit smart. Checked design. Belt loops.\n" +
+    "Chinos by Burton Menswear London. A little bit smart. Checked design. Belt loops.\n\n" +
             "Model's height: 188cm/6'2\".\n" +
-            "Model is wearing: W 32\" L 32\".\n" +
+            "Model is wearing: W 32\" L 32\".\n\n" +
             "Smooth woven fabric. It's got a little stretch.",
-    "Trousers by Celio. A little bit smart. Regular rise. Concealed fly with button fastening.\n" +
+    "Trousers by Celio. A little bit smart. Regular rise. Concealed fly with button fastening.\n\n" +
             "Model's height: 185.5cm/6'1\".\n" +
-            "Model is wearing: W 32\" L 32\".\n" +
+            "Model is wearing: W 32\" L 32\".\n\n" +
             "Textured woven fabric. It's got a little stretch.",
-    "Trousers by Weekday. Part of our responsible edit. Belt loops. Zip fly with button fastening.\n" +
+    "Trousers by Weekday. Part of our responsible edit. Belt loops. Zip fly with button fastening.\n\n" +
             "Model's height: 185.5cm/6'1\".\n" +
-            "Model is wearing: W 32\" L 32\".\n" +
+            "Model is wearing: W 32\" L 32\".\n\n" +
             "Lightweight woven fabric. Made from organic cotton.",
-    "Trousers by Only & Sons. Coming soon to your Saved Items. Pinstripe design. Zip fly with button fastening.\n" +
+    "Trousers by Only & Sons. Coming soon to your Saved Items. Pinstripe design. Zip fly with button fastening.\n\n" +
             "Model's height: 6'2”/188 cm.\n" +
-            "Model is wearing: W 32\" L 32\".\n" +
+            "Model is wearing: W 32\" L 32\".\n\n" +
             "Lightweight woven fabric. The kind that stretches.",
-    "Chinos multipack by JN Design. Part of our responsible edit. Pack of two pairs. Belt loops.\n" +
+    "Chinos multipack by JN Design. Part of our responsible edit. Pack of two pairs. Belt loops.\n\n" +
             "Model's height: 185.5cm/6'1\".\n" +
-            "Model is wearing: W 32\" L 32\".\n" +
+            "Model is wearing: W 32\" L 32\".\n\n" +
             "Soft woven fabric. It's got a little stretch.",
-    "Tights by Nike. Elasticated waistband. Nike Pro branding.\n" +
+    "Tights by Nike. Elasticated waistband. Nike Pro branding.\n\n" +
             "Model's height: 185.5cm/6'1\".\n" +
-            "Model is wearing: W 32\" L 32\".\n" +
+            "Model is wearing: W 32\" L 32\".\n\n" +
             "Tight, stretchy Nike Pro fabric. Uses Nike Dri-FIT technology.",
-    "Shirt by PS Paul Smith. Casual, meet smart. Long sleeves. Button placket.\n" +
+    "Shirt by PS Paul Smith. Casual, meet smart. Long sleeves. Button placket.\n\n" +
             "Model's height: 183cm/6'0\".\n" +
-            "Model is wearing: Size Medium.\n" +
+            "Model is wearing: Size Medium.\n\n" +
             "Lightweight cotton. Soft, strong and breathable.",
-    "Shirt by Armani Exchange. For your everyday thing. All-over logo print. Spread collar. Button placket.\n" +
+    "Shirt by Armani Exchange. For your everyday thing. All-over logo print. Spread collar. Button placket.\n\n" +
             "Model's height: 183cm/6'0\".\n" +
-            "Model is wearing: Size Medium.\n" +
+            "Model is wearing: Size Medium.\n\n" +
             "Crisp woven cotton. Its got a little stretch.",
-    "Shirt by AllSaints. For your daytime thing. Revere collar. Button placket.\n" +
+    "Shirt by AllSaints. For your daytime thing. Revere collar. Button placket.\n\n" +
             "Model's height: 185.5cm/6'1\".\n" +
-            "Model is wearing: Size Medium.\n" +
+            "Model is wearing: Size Medium.\n\n" +
             "Lightweight viscose. Soft and drapey.",
-    "Shirt by Polo Ralph Lauren. Part of our responsible edit. Striped design. Button-down collar.\n" +
+    "Shirt by Polo Ralph Lauren. Part of our responsible edit. Striped design. Button-down collar.\n\n" +
             "Model's height: 187.5cm/6'2\".\n" +
-            "Model is wearing: Size Medium.\n" +
+            "Model is wearing: Size Medium.\n\n" +
             "Lightweight cotton. Polo Ralph Lauren partners with the Better Cotton Initiative to improve cotton farming globally.",
-    "Oxford shirt by Tommy Hilfiger. Breathable cotton. Button-down collar. Embroidered logo.\n" +
+    "Oxford shirt by Tommy Hilfiger. Breathable cotton. Button-down collar. Embroidered logo.\n\n" +
             "Model's height: 6'2”/188 cm.\n" +
-            "Model is wearing: Size Medium.\n" +
+            "Model is wearing: Size Medium.\n\n" +
             "Main: 98% Cotton, 2% Elastane.",
-    "Shirt by Celio. Spread collar. Button placket. Chest pocket.\n" +
+    "Shirt by Celio. Spread collar. Button placket. Chest pocket.\n\n" +
             "Model's height: 183cm/6'2.5\".\n" +
-            "Model is wearing: Size Medium.\n" +
+            "Model is wearing: Size Medium.\n\n" +
             "Lightweight linen. Strong, breathable fabric.",
-    "Shirt by JN Design. Revere collar. Short sleeves. Plain design.\n" +
+    "Shirt by JN Design. Revere collar. Short sleeves. Plain design.\n\n" +
             "Model's height: 185.5cm/6'1\".\n" +
-            "Model is wearing: Size Medium.\n" +
+            "Model is wearing: Size Medium.\n\n" +
             "Linen-rich fabric. It's strong and breathable.",
-    "Shirt by JN Design. Part of our responsible edit. Spread collar. Button placket.\n" +
+    "Shirt by JN Design. Part of our responsible edit. Spread collar. Button placket.\n\n" +
             "Model's height: 178cm/5'10\".\n" +
-            "Model is wearing: Size Medium.\n" +
+            "Model is wearing: Size Medium.\n\n" +
             "Lightweight cotton. Soft, strong and breathable.",
-    "Shirt by JN Design. Let your outfit do the talking. Animal print. Notch lapels/\n" +
+    "Shirt by JN Design. Let your outfit do the talking. Animal print. Notch lapels.\n\n" +
             "Model's height: 187.5cm/6'2\".\n" +
-            "Model is wearing: Size Medium.\n" +
+            "Model is wearing: Size Medium.\n\n" +
             "Lightweight, woven fabric. For those see-through vibes.",
-    "Shirt by Pull&Bear. Not every day's a T-shirt day. All-over Aztec print. Revere collar.\n" +
+    "Shirt by Pull&Bear. Not every day's a T-shirt day. All-over Aztec print. Revere collar.\n\n" +
             "Model's height: 185.5cm/6'1\".\n" +
-            "Model is wearing: Size Medium.\n" +
+            "Model is wearing: Size Medium.\n\n" +
             "Lightweight woven fabric. Soft and drapey.",
-    "Trainers by Bronx. Unboxing potential: considerable. Graffiti print. Lace-up fastening.\n" +
+    "Trainers by Bronx. Unboxing potential: considerable. Graffiti print. Lace-up fastening.\n\n" +
             "Matte leather upper. Leather lining.",
-    "Trainers by Nike. Elevate your run. Lace-up fastening\n" +
+    "Trainers by Nike. Elevate your run. Lace-up fastening\n\n" +
             "Padded tongue and cuffs for comfort.\n" +
             "Breathable mesh upper. Keeps them fresher for longer.",
-    "Trainers by Fred Perry. Unboxing potential: considerable. Low-profile design. Lace-up fastening.\n" +
+    "Trainers by Fred Perry. Unboxing potential: considerable. Low-profile design. Lace-up fastening.\n\n" +
             "Smooth leather upper. Matte finish.",
-    "Trainers by Vans. Unboxing potential: considerable. Colour-block design. Lace-up fastening.\n" +
+    "Trainers by Vans. Unboxing potential: considerable. Colour-block design. Lace-up fastening.\n\n" +
             "Canvas upper. Durable, plain-woven fabric.",
-    "Trainers by Converse. Unboxing potential: considerable . Tie-dye finish. Lace-up design.\n" +
+    "Trainers by Converse. Unboxing potential: considerable . Tie-dye finish. Lace-up design.\n\n" +
             "Lightly textured canvas upper. Durable, plain-woven fabric.",
-    "Boots by Dr Martens. Zip and lace-up fastening. Round toe.\n" +
+    "Boots by Dr Martens. Zip and lace-up fastening. Round toe.\n\n" +
             "Smooth leather upper. Glossy, patent finish.",
-    "Trainers by Nike. Elevate your run. Lace-up fastening. Nike Swoosh logo.\n" +
+    "Trainers by Nike. Elevate your run. Lace-up fastening. Nike Swoosh logo.\n\n" +
             "Breathable mesh upper. Smooth overlays.",
-    "Boots by Burton Menswear London. Your rain-or-shine shoes. Elasticated inserts. Pull tabs.\n" +
+    "Boots by Burton Menswear London. Your rain-or-shine shoes. Elasticated inserts. Pull tabs.\n\n" +
             "Leather and suede upper. Matte finish.",
-    "Espadrilles by JN Design. Who needs the back of a shoe anyway? Slip-on style. Gold-tone snaffle detail.\n" +
+    "Espadrilles by JN Design. Who needs the back of a shoe anyway? Slip-on style. Gold-tone snaffle detail.\n\n" +
             "Soft suede upper. Fuzzy, velvety finish.",
-    "Trainers by Nike. Lace-up design. Pull tabs for easy on/off.\n" +
+    "Trainers by Nike. Lace-up design. Pull tabs for easy on/off.\n\n" +
             "Knitted upper. Comfy, sock-like fit."
     };
 
