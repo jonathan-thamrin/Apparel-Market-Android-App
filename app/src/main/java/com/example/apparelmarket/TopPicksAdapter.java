@@ -21,6 +21,8 @@ import com.example.apparelmarket.models.ApparelItem;
 
 import java.util.ArrayList;
 
+import static com.example.apparelmarket.SessionClass.largestthree;
+
 public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPickitemViewHolder> {
     Context context;
     private ArrayList<ApparelItem> listofitems = new ArrayList<ApparelItem>();
@@ -70,7 +72,7 @@ public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPic
 
     @Override
     public void onBindViewHolder(@NonNull TopPicksAdapter.TopPickitemViewHolder holder, int position) {
-        SessionClass.largestthree();
+        largestthree();
         int resID =  SessionClass.toppickarray.get(position).getItemImage()[0];
 
         holder.tvName.setText(SessionClass.toppickarray.get(position).getName());

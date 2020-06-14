@@ -22,6 +22,7 @@ public class SessionClass {
 
         third = first = second = Integer.MIN_VALUE;
         firstindex = secondindex = thirdindex = 0;
+
         for (i = 0; i < ApparelProvider.dataArray.size() ; i ++)
         {
             /* If current element is greater than
@@ -38,7 +39,7 @@ public class SessionClass {
 
             }
 
-            /* If arr[i] is in between first and
+            /* If dataarray[i] is in between first and
             second then update second  */
             else if (ApparelProvider.dataArray.get(i).getItemView() > second)
             {
@@ -51,8 +52,10 @@ public class SessionClass {
             }
 
             else if (ApparelProvider.dataArray.get(i).getItemView() > third)
+            {
                 third = ApparelProvider.dataArray.get(i).getItemView();
                 thirdindex = i;
+            }
 
         }
 
