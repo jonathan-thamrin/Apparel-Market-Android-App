@@ -1,14 +1,9 @@
-package com.example.apparelmarket;
+package com.example.apparelmarket.models;
 
-import android.app.Activity;
-import android.app.ActivityOptions;
 import android.content.Context;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,11 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.example.apparelmarket.models.ApparelItem;
+import com.example.apparelmarket.R;
 
 import java.util.ArrayList;
 
-import static com.example.apparelmarket.SessionClass.largestthree;
+import static com.example.apparelmarket.models.SessionClass.largestthree;
 
 public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPickitemViewHolder> {
     Context context;

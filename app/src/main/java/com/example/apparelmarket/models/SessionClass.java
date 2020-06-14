@@ -1,4 +1,4 @@
-package com.example.apparelmarket;
+package com.example.apparelmarket.models;
 
 import com.example.apparelmarket.models.ApparelItem;
 import com.example.apparelmarket.models.ApparelProvider;
