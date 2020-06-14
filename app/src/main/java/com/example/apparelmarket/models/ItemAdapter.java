@@ -52,6 +52,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.itemViewHolder
         public TextView tvPrice;
         public LinearLayout parent;
 
+        // Updates the item's details with the appropriate information.
         public itemViewHolder(@NonNull View itemView, final OnItemClickListener passed) {
             super(itemView);
             ivImage = itemView.findViewById(R.id.ivItemImg);
@@ -75,6 +76,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.itemViewHolder
 
     @NonNull
     @Override
+    // Inflates the appropriate view for displaying the ListActivity / List Items.
     public itemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
         itemViewHolder itemviews = new itemViewHolder(v, clickListener);
@@ -87,6 +89,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.itemViewHolder
     }
 
     @Override
+    // Updates the item's details with the appropriate information.
     public void onBindViewHolder(@NonNull itemViewHolder holder, int position) {
         ApparelItem currentItem = listofitems.get(position);
 
@@ -98,6 +101,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.itemViewHolder
 
     }
 
+    // Controls the animation for loading an item in ListActivity.
     private void setAnimation(View viewToAnimate, int position) {
         Animation animation = AnimationUtils.loadAnimation(context, (position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_bottom);
         viewToAnimate.startAnimation(animation);

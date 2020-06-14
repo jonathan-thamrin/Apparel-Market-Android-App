@@ -16,6 +16,8 @@ public class SessionClass {
         toppickarray.add(ApparelProvider.dataArray.get(2));
     }
 
+    // Calculates the item with the highest number of views and displays it from highest to lowest.
+    // Generates an array with that order for use in MainActivity.
     public static void largestthree() {
         int i, first, second, third;
         int firstindex,secondindex,thirdindex;

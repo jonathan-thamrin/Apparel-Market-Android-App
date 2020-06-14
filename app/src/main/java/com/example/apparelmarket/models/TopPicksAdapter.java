@@ -35,6 +35,7 @@ public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPic
         public ImageView ivImage;
         public TextView  tvName;
 
+        // Dynamically adds information to the Top Pick items.
         public TopPickitemViewHolder(@NonNull View itemView, final OnItemClickListener passed) {
             super(itemView);
             ivImage = itemView.findViewById(R.id.TopPicksImage);
@@ -55,6 +56,7 @@ public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPic
 
     @NonNull
     @Override
+    // Inflates the appropriate view for Top Picks.
     public TopPickitemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_toppicks, parent, false);
         TopPicksAdapter.TopPickitemViewHolder itemviews = new TopPicksAdapter.TopPickitemViewHolder(v, clickListener);

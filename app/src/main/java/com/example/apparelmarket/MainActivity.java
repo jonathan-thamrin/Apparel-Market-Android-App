@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         cvCategory2 = (CardView) findViewById(R.id.cvCategory2);
         cvCategory3 = (CardView) findViewById(R.id.cvCategory3);
 
+        // Sets up a grid-like structure for displaying the Top Pick items.
         GridLayoutManager gm = new GridLayoutManager(this,3);
         SessionClass.largestthree();
         toppicksRecycle = (RecyclerView) findViewById(R.id.TopPicksView);
@@ -48,11 +49,12 @@ public class MainActivity extends AppCompatActivity {
         toppicksRecycle.setLayoutManager(gm);
         toppicksRecycle.setAdapter(topadapter);
 
-
         setupCategorySelectedListener();
         setupTopPicksListener();
     }
 
+
+    // Transitions from MainActivity to DetailsActivity when an item from Top Picks is selected.
     public void setupTopPicksListener() {
         topadapter.setOnItemClickListner(new TopPicksAdapter.OnItemClickListener() {
             @Override
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void setupCategorySelectedListener() {
         // Sets OnClick Listener for ListView
-        // Sends String of query for catagory, to Display all of a certain catagory
+        // Sends String of query for category, to Display all of a certain category
         cvCategory1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,7 +120,8 @@ public class MainActivity extends AppCompatActivity {
                 searchView.setIconified(true);
                 searchItem.collapseActionView();
 
-                //complete SearchActivity by yourself
+                // Sends an intent with information from MainActivity to ListActivity, to display appropriate
+                // item results based on a search.
                 Intent intent = new Intent(MainActivity.this, ListActivity.class);
                 intent.putExtra(ITEM_DETAIL_KEY, query);
                 startActivity(intent);
