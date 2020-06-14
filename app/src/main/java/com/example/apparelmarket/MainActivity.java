@@ -113,11 +113,6 @@ public class MainActivity extends AppCompatActivity {
         final MenuItem searchItem = menu.findItem(R.id.action_search);
         final SearchView searchView = (SearchView) searchItem.getActionView();
 
-       /* SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(new ComponentName(this, SearchActivity.class)));
-        searchView.setQueryHint("epic");
-        return true;*/
-
         //Intent to search
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

@@ -22,7 +22,7 @@
         android:fontFamily="@font/oswald"
         android:textFontWeight="500"
         android:textColor="#000"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:letterSpacing="0.1"
         android:text="MOST POPULAR" />
 
@@ -48,7 +48,7 @@
             android:layout_width="360dp"
             android:layout_height="1px"
             android:layout_gravity="center"
-            android:layout_marginVertical="16dp" />
+            android:layout_marginVertical="18dp" />
 
         <TextView
             style="@style/CategoryTitle"
