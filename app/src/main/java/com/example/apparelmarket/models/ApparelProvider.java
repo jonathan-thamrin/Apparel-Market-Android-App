@@ -27,14 +27,14 @@ public class ApparelProvider {
     };
 
     static String[] itemNames = {
-            "boohooMAN winter tartan trouser", "New Look slim chinos", "Ted Baker slim fit stretch trousers", "Only & Sons drawstring jersey trousers", "Burton Menswear skinny trousers",
-            "Celio slim trousers", "Weekday Tucker Checked Trousers", "Only & Sons stretch smart trouser", "JN Design 2 pack skinny chinos", "Nike Pro Training tights",
+            "boohooMAN tartan trouser", "New Look slim chinos", "Ted Baker slim fit trousers", "Only & Sons drawstring trousers", "Burton Menswear skinny trousers",
+            "Celio slim trousers", "Weekday Tucker Trousers", "Only & Sons stretch trouser", "JN Design 2 pack skinny chinos", "Nike Pro Training tights",
 
-            "PS Paul Smith patchwork pocket shirt", "Armani Exchange long sleeve shirt", "AllSaints revere collar shirt with tiger print", "Polo Ralph Lauren short sleeve oxford shirt", "Tommy Hilfiger oxford shirt",
+            "PS Paul Smith patchwork pocket shirt", "Armani Exchange long sleeve shirt", "AllSaints revere collar shirt", "Polo Ralph Lauren oxford shirt", "Tommy Hilfiger oxford shirt",
             "Celio shirt in linen", "JN Design relaxed fit linen shirt", "JN Design stretch skinny fit shirt", "JN Design regular fit sheer shirt", "Pull&Bear shirt with aztec print",
 
             "Bronx seventy street trainers", "Nike Running Renew Run trainers", "Fred Perry Deuce leather trainers", "Vans Anaheim Old Skool trainer", "Converse Chuck Taylor Tie Dye trainer",
-            "Dr Martens jadon platform boots", "Nike Running Joyride Dual Run trainers", "Burton Menswear leather boot", "JN Design slip ons", "Nike Air Max 2090 trainers"
+            "Dr Martens jadon platform boots", "Nike Running Joyride trainers", "Burton Menswear leather boot", "JN Design slip ons", "Nike Air Max 2090 trainers"
     };
 
 
