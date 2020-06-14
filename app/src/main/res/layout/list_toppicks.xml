@@ -17,9 +17,8 @@
             style="@style/TopPicksText"
             android:id="@+id/TopPicksText"
             android:text="Best Seller"
-            android:autoSizeMinTextSize="2sp"
-            android:autoSizeMaxTextSize="19sp"
-            android:autoSizeTextType="uniform"/>
+            android:padding="4dp"
+            android:textSize="11sp"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
