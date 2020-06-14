@@ -33,25 +33,30 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
+        // Sets up a grid layout for displaying the items.
         GridLayoutManager gm = new GridLayoutManager(this,2);
         lvItems = (RecyclerView) findViewById(R.id.lvItems);
+
+        // Intent passes a query for generating an ArrayList of ApparelItems for display.
         Intent thisIntent = getIntent();
-        // Intent passes a query
         String query =  thisIntent.getStringExtra(MainActivity.ITEM_DETAIL_KEY);
-        //Query is used to generate the array
-        final ArrayList<ApparelItem> categoryItems = SearchClass.searchFunction(query, ApparelProvider.dataArray);
+        final ArrayList<ApparelItem> queriedItems = SearchClass.searchFunction(query, ApparelProvider.dataArray);
+
         // Sets the adapter for the ListView for items in specified category.
-        itemAdapter = new ItemAdapter(categoryItems, ListActivity.this);
+        itemAdapter = new ItemAdapter(queriedItems, ListActivity.this);
+
         lvItems.setLayoutManager(gm);
         lvItems.setAdapter(itemAdapter);
 
-        if (!(categoryItems.get(0).getId() == "null")) {
+        // Item can be clicked only if results are shown.
+        if (!(queriedItems.get(0).getId() == "null")) {
             itemAdapter.setOnItemClickListner(new ItemAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(int position) {
                     Intent intent = new Intent(ListActivity.this, DetailsActivity.class);
-                    intent.putExtra(ITEM_DETAIL_KEY, categoryItems.get(position).getId());
+                    intent.putExtra(ITEM_DETAIL_KEY, queriedItems.get(position).getId());
                     startActivity(intent);
+                    // Overrides the default animation when transitioning between activities.
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 }
             });
