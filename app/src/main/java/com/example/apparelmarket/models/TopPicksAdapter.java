@@ -1,10 +1,9 @@
-package com.example.apparelmarket;
+package com.example.apparelmarket.models;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,12 +12,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.example.apparelmarket.models.ApparelItem;
+import com.example.apparelmarket.R;
 
 import java.util.ArrayList;
 
-public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPickitemViewHolder> {
+import static com.example.apparelmarket.models.SessionClass.largestthree;
 
+public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPickitemViewHolder> {
+    Context context;
     private ArrayList<ApparelItem> listofitems = new ArrayList<ApparelItem>();
     private TopPicksAdapter.OnItemClickListener clickListener;
 
@@ -38,7 +39,6 @@ public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPic
             super(itemView);
             ivImage = itemView.findViewById(R.id.TopPicksImage);
             tvName = itemView.findViewById(R.id.TopPicksText);
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -61,12 +61,13 @@ public class TopPicksAdapter extends RecyclerView.Adapter<TopPicksAdapter.TopPic
         return itemviews;
     }
 
-    public TopPicksAdapter() {
-
+    public TopPicksAdapter(Context context) {
+        this.context = context;
     }
 
     @Override
     public void onBindViewHolder(@NonNull TopPicksAdapter.TopPickitemViewHolder holder, int position) {
+        largestthree();
         int resID =  SessionClass.toppickarray.get(position).getItemImage()[0];
 
         holder.tvName.setText(SessionClass.toppickarray.get(position).getName());

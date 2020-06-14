@@ -1,7 +1,11 @@
 package com.example.apparelmarket;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.util.Pair;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ActivityOptions;
 import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,8 +25,7 @@ public class ListActivity extends AppCompatActivity {
     // Pulling together ItemAdapter and initialising the custom Layout XML with all the books.
     public static final String ITEM_DETAIL_KEY = "item";
     // From activity_list.xml
-    ListView lvItems;
-    // From Adapter extending ArrayAdapter
+    RecyclerView lvItems;
     ItemAdapter itemAdapter;
 
     @Override
@@ -30,34 +33,35 @@ public class ListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        // ListView from activity_list.xml
-        lvItems = (ListView) findViewById(R.id.lvItems);
-
+        GridLayoutManager gm = new GridLayoutManager(this,2);
+        lvItems = (RecyclerView) findViewById(R.id.lvItems);
         Intent thisIntent = getIntent();
-
-
         // Intent passes a query
         String query =  thisIntent.getStringExtra(MainActivity.ITEM_DETAIL_KEY);
         //Query is used to generate the array
-        ArrayList<ApparelItem> categoryItems = SearchClass.searchFunction(query, ApparelProvider.dataArray);
+        final ArrayList<ApparelItem> categoryItems = SearchClass.searchFunction(query, ApparelProvider.dataArray);
         // Sets the adapter for the ListView for items in specified category.
-        itemAdapter = new ItemAdapter(this, categoryItems);
+        itemAdapter = new ItemAdapter(categoryItems, ListActivity.this);
+        lvItems.setLayoutManager(gm);
         lvItems.setAdapter(itemAdapter);
 
         if (!(categoryItems.get(0).getId() == "null")) {
-            setupItemSelectedListener();
+            itemAdapter.setOnItemClickListner(new ItemAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(int position) {
+                    Intent intent = new Intent(ListActivity.this, DetailsActivity.class);
+                    intent.putExtra(ITEM_DETAIL_KEY, categoryItems.get(position).getId());
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                }
+            });
         }
     }
 
-    public void setupItemSelectedListener() {
-        lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(ListActivity.this, DetailsActivity.class);
-                // Sending Data
-                intent.putExtra(ITEM_DETAIL_KEY, itemAdapter.getItem(position).getId());
-                startActivity(intent);
-            }
-        });
+    // Changes default animation to a custom one.
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
+
 }

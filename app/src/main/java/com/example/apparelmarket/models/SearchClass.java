@@ -24,7 +24,7 @@ public class SearchClass {
         // Returns a single Card if no results are found in ListActivity.
         if (toReturn.isEmpty()) {
             int[] notFound = {R.drawable.no_query,R.drawable.no_query,R.drawable.no_query};
-            ApparelItem notfound= new ApparelItem("null","null", "Please try again.", "No results found,", "null", notFound,1);
+            ApparelItem notfound= new ApparelItem("null","null", "Please try again,", "No results found.", "null", notFound,1);
             toReturn.add(notfound);
         }
 

@@ -2,42 +2,52 @@
 <androidx.cardview.widget.CardView
     style="@style/CategoryCard"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:elevation="8dp">
+    android:elevation="8dp"
+    app:cardBackgroundColor="#fff"
+    android:layout_margin="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id = "@+id/parent">
 
         <ImageView
             android:id="@+id/ivItemImg"
             android:layout_width="match_parent"
-            android:layout_height="420dp"
+            android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginVertical="16dp"
+            android:layout_marginVertical="8dp"
+            android:scaleType="centerInside"
             android:src="@drawable/shirt_9_1"/>
-
-        <TextView
-            android:id="@+id/tvItemName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:textAllCaps="true"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:layout_marginHorizontal="32dp"
-            android:text="A Blue Shirt"/>
 
         <TextView
             android:id="@+id/tvItemPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans"
             android:gravity="center"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:layout_marginBottom="3dp"
             android:text="$49.99"/>
+
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_marginHorizontal="8dp"
+            android:fontFamily="@font/merriweather"
+            android:text="A Blue Shirt"/>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
