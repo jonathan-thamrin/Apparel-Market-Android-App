@@ -98,8 +98,8 @@
 
             <com.synnapps.carouselview.CarouselView
                 android:id="@+id/carouselView"
-                android:layout_width="320dp"
-                android:layout_height="366dp"
+                android:layout_width="351dp"
+                android:layout_height="378dp"
                 app:fillColor="#FFFFFFFF"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
