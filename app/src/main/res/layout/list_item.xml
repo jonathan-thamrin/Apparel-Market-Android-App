@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:elevation="8dp"
-    app:cardBackgroundColor="#f5f5f5"
+    app:cardBackgroundColor="#fff"
     android:layout_margin="5dp">
 
     <LinearLayout
@@ -20,33 +20,34 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginVertical="5dp"
+            android:layout_marginVertical="8dp"
             android:scaleType="centerInside"
             android:src="@drawable/shirt_9_1"/>
-
-        <TextView
-            android:id="@+id/tvItemName"
-            android:transitionName="TitleTransition"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="true"
-            android:gravity="center"
-            android:autoSizeMinTextSize="9sp"
-            android:autoSizeMaxTextSize="20sp"
-            android:layout_marginHorizontal="5dp"
-            android:autoSizeTextType="uniform"
-            android:text="A Blue Shirt"/>
 
         <TextView
             android:id="@+id/tvItemPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans"
             android:gravity="center"
-            android:layout_marginBottom="5dp"
-            android:autoSizeMinTextSize="9sp"
-            android:autoSizeMaxTextSize="16sp"
-            android:autoSizeTextType="uniform"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginBottom="3dp"
             android:text="$49.99"/>
+
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:layout_marginHorizontal="8dp"
+            android:fontFamily="@font/merriweather"
+            android:text="A Blue Shirt"/>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
